@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogContent from "@material-ui/core/DialogContent";
-import Rose from '../../static/images/rosegift.png';
+import Ribbon from '../../static/images/ribbon-sm.png';
 import whatsapp from '../../static/icons/whatsapp.png';
 import classes from "./style.module.scss";
 import windowDimension from '../../utils/useWindowDimensions';
@@ -62,6 +62,10 @@ const PopupGiftConfirmation = withStyles(styles)((props) => {
       overlayStyle={{ backgroundColor: 'transparent' }}
       style={{
         fontFamily: "'Charm', cursive",
+        width: '360px',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
       }}
     >
       <DialogContent
@@ -78,7 +82,7 @@ const PopupGiftConfirmation = withStyles(styles)((props) => {
             &#10006;
           </div>
           <div className={classes.popupTitleWrapper} onClose={handleClose}>
-            <img className={classes.headerImg} src={Rose} alt="Rose" />
+            <img className={classes.headerImg} src={Ribbon} alt="Rose" />
             <p>Konfirmasi Hadiah</p>
           </div>
           <div className={classes.subtitle}>
@@ -95,7 +99,7 @@ const PopupGiftConfirmation = withStyles(styles)((props) => {
                 <select name="destination" onChange={selectDestination}>
                   <option value="" disabled>-- Pilih Tujuan --</option>
                   <option value="Hadiah Fisik">Alamat Rumah</option>
-                  <option value="Rekening">Mandiri / 1570005756763 / Ridwan Krisdiansah</option>
+                  <option value="Rekening">Mandiri / 1111111111111 / Adhy Irawan</option>
                 </select>
               </div>
             </div>
