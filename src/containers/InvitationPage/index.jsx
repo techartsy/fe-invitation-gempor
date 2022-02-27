@@ -24,7 +24,6 @@ import MessageImg from '../../static/images/message-img.png';
 import wingribbon from '../../static/images/ribbon.png';
 import creditcard from '../../static/images/creditcard.svg';
 import numbercopy from '../../static/images/numbercopy.png';
-import logoGold from '../../static/images/logoGold.png';
 import logoSm from '../../static/images/logo-sm.png';
 import calender from '../../static/icons/calender.png';
 import time from '../../static/icons/time.png';
@@ -87,6 +86,7 @@ const InvitationPage = () => {
   const copyText = () => {
     navigator.clipboard.writeText(wording)
     setNotif('Copied')
+    console.log(wording, 'copird')
     setTimeout(() => {
       setNotif('')
     }, 3000)
@@ -354,7 +354,7 @@ const InvitationPage = () => {
   const generateHeader = () => {
     return (
       <div className={classes.header}>
-        <Fade delay={2000} duration={2000}>
+        <Fade delay={1500} duration={2000}>
           <div className={classes.countdown}>
             {timerComponents.length && timerComponents}
           </div>
@@ -693,7 +693,7 @@ const InvitationPage = () => {
           </div>
           <div className={classes.closingSentenceWrapper}>
             <p>
-              Kehadiran & doa Anda<br/> adalah berkah, kehormatan & kebahagiaan bagi kami.<br/>
+              Kehadiran serta doa Anda<br/> adalah berkah, kehormatan & kebahagiaan bagi kami.<br/>
               Kami mengatakan dari hati kami yang terdalam, atas perhatian Anda<br/>
               Terima kasih
             </p>
@@ -707,7 +707,7 @@ const InvitationPage = () => {
     return (
       <div className={classes.footerContainer}>
         <div className={classes.footerTitle} onClick={contactWA}>
-          <img className={classes.brand} alt='techartsyGold' src={width === 'lg' ? logoGold : logoSm} />
+          <img className={classes.brand} src={logoSm} alt='techartsybrand' />
           <img className={classes.contact} src={whatsapp} alt="whatsapp" />
         </div>
       </div >
