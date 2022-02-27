@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from 'react';
 import Song from '../../static/music/apocalypse.mp3';
-import Naif from '../../static/music/naif.mp4';
 import Vn from '../../static/music/vn.m4a';
 import Play from '../../static/icons/play.png';
 import Pause from '../../static/icons/pause.png';
@@ -26,7 +25,6 @@ const AudioPlayer = ({ isPlaying, setIsPlaying}) => {
 
   useEffect(() => {
     changeBackground()
-    // window.addEventListener("scroll", changeBackground)
   })
 
   useEffect(() => {

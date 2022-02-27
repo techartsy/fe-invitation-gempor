@@ -19,11 +19,11 @@
     .header {
       @include directionY;
       @include parallax;
-      height: 100%;
       width: 100%;
       top: 0;
       border: none;
       object-fit: cover;
+      background-size: 360px 240px;
       background-repeat: no-repeat;
       border-bottom: 1px solid $color-gold;
       background-image: url("../../static/images/mainimage-sm.png");
@@ -41,48 +41,31 @@
         box-shadow: 0px 28.5491px 28.5491px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(30px);
         width: 30%;
-        // padding-top: 2px;
-        // padding-bottom: 5px;
         justify-content: space-around;
         color: $color-white;
         margin-bottom: 3%;
-
-        // @include apply-at-sm-md-size {
         padding: 8px;
         width: 55%;
         text-align: center;
         margin-bottom: 5%;
-        // }
         .countdownItem {
           border-radius: 20px;
-          // @include apply-at-sm-md-size {
           font-size: 9px;
           width: 42px;
           height: 40px;
           // }
           .countdownTime {
-            // font-size: 35px;
             text-align: center;
-            // @include apply-at-sm-md-size {
             font-size: 15px;
             @include useForum;
             line-height: 21.16px;
             margin-bottom: 4%;
-            // }
           }
           .countdownInterval {
-            // font-size: 26px;
-            // @include apply-at-sm-md-size {
-            // border: 1px solid yellow;
-            // letter-spacing: 0.1em;
-
             margin: 0;
             font-size: 15px;
             @include useForum;
             line-height: 21.16px;
-            // @include useMerienda;
-            // font-weight: 100;
-            // }
           }
         }
       }
@@ -148,10 +131,7 @@
         margin-bottom: 25%;
         width: 90%;
         img {
-          // width: 80%;
-          // @include apply-at-md-lg-size {
           width: 203px;
-          // }
           align-self: flex-end;
         }
         .desc {
@@ -177,11 +157,7 @@
         align-items: center;
         width: 90%;
         img {
-          // width: 80%;
-          // @include apply-at-md-lg-size {
           width: 203px;
-          // }
-
           align-self: flex-start;
         }
         .desc {
@@ -207,14 +183,12 @@
       background-position: center;
       background-repeat: no-repeat;
       padding: 2rem 0 2.5rem 0;
-
       .topContent {
         @include directionY;
         @include content-center;
         width: 90%;
         margin-bottom: 10px;
         gap: 10px;
-
         .upper {
           @include directionX;
           justify-content: space-between;
@@ -230,7 +204,6 @@
         .lower {
           @include directionX;
           justify-content: space-between;
-          // justify-content: space-around;
           gap: 10px;
           .imageLowerLeft {
             width: 50%;
@@ -305,23 +278,16 @@
         background-position: center;
         background-repeat: no-repeat;
         .greeting {
-          // @include apply-at-sm-md-size {
           @include content-center;
           width: 95%;
-          // }
           p {
-            // font-size: 29px;
             text-align: center;
-            // @include apply-at-sm-md-size {
             font-size: 15px;
             line-height: 24px;
-            // }
           }
           .subtitle {
-            // @include apply-at-sm-md-size {
             font-size: 13px;
             font-weight: normal;
-            // }
           }
         }
         .details {
@@ -332,35 +298,25 @@
               @include content-center;
               align-items: center;
               justify-content: center;
-              // width: 300px;
-              // font-size: 35px;
               padding-bottom: 14px;
               border-bottom: 1px solid $color-gold;
-              // @include apply-at-sm-md-size {
               margin-top: 10%;
               font-size: 14px;
               width: 40%;
-              // }
             }
           }
           .calender {
             @include directionY;
             @include content-center;
             align-items: center;
-            // width: 20%;
             margin-bottom: 3%;
-            // @include apply-at-sm-md-size {
             margin-top: 8%;
             font-size: 12px;
             width: 50%;
-            // }
             p {
               width: 220px;
               text-align: center;
-              // margin-top: 6%;
-              // @include apply-at-sm-md-size {
               margin-top: 8%;
-              // }
             }
             img {
               @include apply-at-sm-md-size {
@@ -379,7 +335,6 @@
           }
           .timesWraper {
             @include directionX;
-            // @include content-center;
             width: 100%;
             justify-content: space-between;
             margin-bottom: 3%;
@@ -398,20 +353,14 @@
               margin-top: 8%;
               text-align: center;
               font-size: 12px;
-
               img {
-                // @include apply-at-sm-md-size {
                 width: 35px;
-                // }
               }
               .separator {
-                // border: 1px solid red;
-                // @include apply-at-sm-md-size {
                 height: 1px;
                 background: $color-gold;
                 margin-top: -10px;
                 margin-bottom: -10px;
-                // }
               }
             }
           }
@@ -422,24 +371,15 @@
         @include content-center;
         align-items: center;
         margin-bottom: 2%;
-        // width: 28%;
-        // border-bottom: 1px solid $color-gold;
-        // @include apply-at-sm-md-size {
-        // width: 60%;
         font-size: 12px;
         margin-top: 8%;
-        // }
         p {
           width: 100%;
           text-align: center;
-          // @include apply-at-sm-md-size {
           margin-top: 8%;
-          // }
         }
         img {
-          // @include apply-at-sm-md-size {
           width: 30px;
-          // }
         }
       }
       .btnmap {
@@ -447,38 +387,27 @@
         @include directionX;
         align-items: center;
         justify-content: center;
-        // width: 255px;
         padding: 0px 10px;
         margin-bottom: 10%;
-        // font-size: 25px;
         border: 1px solid $color-gold;
-        // border-radius: 20px;
         cursor: pointer;
-        // @include apply-at-sm-md-size {
         max-width: 145px;
         font-size: 12px;
         height: 30px;
         border-radius: 10px;
-        // margin-top: 10%;
-        // }
         .imageWrapper {
-          // width: 20%;
           @include directionX;
           align-items: center;
           justify-content: center;
           img {
-            // @include apply-at-sm-md-size {
             width: 20px;
-            // }
           }
         }
         p {
           color: $color-gold;
           text-decoration: none;
-          // @include apply-at-sm-md-size {
           width: 80%;
           text-align: center;
-          // }
         }
       }
       .topEvent {
@@ -502,9 +431,6 @@
         @include body;
         @include content-center;
         margin-top: 5%;
-        // margin-left: 15%;
-        // font-size: 30px;
-        // @include apply-at-sm-md-size {
         font-size: 16px;
         text-align: center;
         text-decoration-line: underline;
@@ -512,42 +438,29 @@
         text-decoration-color: $color-dark-brown;
         margin-bottom: 5%;
         width: 90%;
-        // }
       }
       .attendingWraper {
         width: 90%;
         @include useMulish;
-        // @include directionX;
         @include content-center;
         justify-content: space-between;
         margin-bottom: 5%;
-        // @include apply-at-sm-md-size {
         @include reverseDirectionY;
-        // }
         .formWraper {
           .dropdownSection {
-            // width: 500px;
             @include directionX;
-            // justify-content: left;
             align-items: center;
             border-bottom: 1px solid $color-gold;
             cursor: pointer;
-            // @include apply-at-sm-md-size {
             width: 100%;
             justify-content: space-between;
-            // }
             .formTitle {
               margin-right: 40%;
-              // font-size: 24px;
-              // @include apply-at-sm-md-size {
               font-size: 12px;
-              // }
             }
             .icon {
               img {
-                // @include apply-at-sm-md-size {
                 width: 12px;
-                // }
               }
             }
           }
@@ -558,42 +471,31 @@
               color: $color-gold;
               .inputs {
                 @include directionY;
-                // font-size: 24px;
                 p {
-                  // @include apply-at-sm-md-size {
                   font-size: 12px;
-                  // }
                 }
                 input {
                   @include useMulish;
                   color: $color-gold;
                   padding-left: 15px;
-                  // width: 230px;
                   height: 40px;
                   margin-bottom: 5%;
-                  // border-radius: 16px;
                   background-color: $color-black;
                   border: 1px solid $color-gold;
-                  // @include apply-at-sm-md-size {
                   width: 95%;
                   border-radius: 10px;
                   font-size: 11px;
-                  // }
                 }
                 textarea {
                   @include useMulish;
                   color: $color-gold;
-                  // height: 90px;
                   padding-left: 15px;
                   padding-top: 30px;
-                  // border-radius: 16px;
                   background-color: $color-black;
                   border: 1px solid $color-gold;
-                  // @include apply-at-sm-md-size {
                   font-size: 11px;
                   height: 86px;
                   border-radius: 10px;
-                  // }
                 }
                 ::-webkit-input-placeholder {
                   color: $color-gold;
@@ -614,53 +516,37 @@
               @include directionX;
               justify-content: space-between;
               .inputs {
-                // @include apply-at-sm-md-size {
                 @include directionY;
                 font-size: 12px;
                 width: 180px;
                 margin-top: 2%;
-                // }
                 .radioWrapper {
-                  // @include directionX;
                   width: 100%;
-                  // @include apply-at-sm-md-size {
                   @include directionY;
-                  // }
                   .radioItem {
-                    // @include directionX;
                     margin-right: 10px;
                     accent-color: $color-dark-brown;
-                    // @include apply-at-sm-md-size {
                     @include directionX;
                     align-items: center;
                     margin: 2% 0;
-                    // }
                     label {
-                      // @include apply-at-sm-md-size {
                       font-size: 10px;
                       margin-left: 5%;
-                      // }
                     }
                   }
                 }
               }
               .btnSend {
                 align-self: flex-end;
-                // font-weight: bold;
                 cursor: pointer;
-                // padding: 2%;
-                // height: 40px;
-                // border-radius: 10px;
                 color: $color-gold;
                 background-color: $color-black;
                 border: 1px solid $color-gold;
-                // @include apply-at-sm-md-size {
                 padding: 0 3%;
                 height: 32px;
                 font-size: 12px;
                 border-radius: 6px;
                 font-weight: normal;
-                // }
               }
             }
           }
@@ -684,10 +570,7 @@
             font-size: 14px;
           }
           img {
-            // width: 269px;
-            // @include apply-at-sm-md-size {
             width: 155px;
-            // }
             margin-bottom: 30px;
           }
           .expression {
@@ -699,69 +582,43 @@
     .messageSectionContainer {
       background-repeat: no-repeat;
       background-size: cover;
-      // padding-bottom: 2%;
       border-top: 1px solid $color-dark-brown;
       .sectionTitle {
         @include content-center;
         text-align: center;
         border-bottom: 1px solid $color-gold;
-        // width: 20%;
-        // font-size: 29px;
         margin-bottom: 5%;
-        // @include apply-at-sm-md-size {
         font-size: 14px;
         width: 40%;
-        // }
       }
       .mainContent {
-        // @include directionX;
         @include content-center;
-        // border: 1px solid red;
         align-items: center;
-        // justify-content: space-between;
         justify-content: center;
-        // width: 90%;
-        // @include apply-at-sm-md-size {
         @include reverseDirectionY;
         width: 100%;
-        // }
         .leftSection {
           @include directionY;
           justify-content: center;
           padding: 2rem 0;
           background-image: url("../../static/images/message-icon-bg.png");
-          // background-image: url("../../static/images/closing-bg.png");
           background-size: cover;
           background-repeat: no-repeat;
           object-fit: cover;
-
           align-items: center;
-          // width: 100%;
-          // margin-right: 3%;
-          // @include apply-at-sm-md-size {
           width: 100%;
-          // }
           img {
-            // @include apply-at-sm-md-size {
             width: 170px;
-            // }
           }
         }
         .rightSection {
-          // width: 50%;
           border: 1px solid red;
-
           border-radius: 10px;
-          // padding: 2% 3%;
-          // @include apply-at-sm-md-size {
           width: 100%;
           border: none;
-          // }
           .imgWrapper {
-            // @include apply-at-sm-md-size {
             width: 100%;
             padding-bottom: 20px;
-            // }
             .image {
               @include directionX;
               @include content-center;
@@ -769,10 +626,8 @@
             }
           }
           .messageWrapper {
-            // padding-top: 20px;
             height: 360px;
             overflow-y: scroll;
-            // border-top: 1px solid $color-dark-brown;
             border-bottom: 1px solid $color-dark-brown;
             padding-bottom: 1rem;
             &::-webkit-scrollbar {
@@ -787,29 +642,21 @@
               align-items: center;
               color: $color-black;
               height: auto;
-              // @include apply-at-sm-size {
               @include content-center;
               width: 90%;
-              // }
               .avatar {
                 @include directionX;
-                // width: 5%;
                 margin: auto;
-                // @include apply-at-sm-size {
                 align-items: center;
                 height: 25px;
                 width: 25px;
                 margin-right: 5px;
-                // }
               }
               .messageShape {
                 @include directionX;
                 width: 95%;
                 align-items: center;
-                // padding-left: 1.5rem;
-                // @include apply-at-sm-size {
                 padding-left: 1rem;
-                // }
                 .outerTriangle {
                   width: 0;
                   height: 0;
@@ -835,29 +682,16 @@
                   border-radius: 6px;
                   text-align: left;
                   padding: 20px;
-                  // width: 100%;
                   margin-left: -5px;
                   @include useForum;
-
-                  // @include apply-at-sm-size {
                   width: 80%;
-                  // }
                   .name {
-                    // font-size: 17px;
-                    // margin-bottom: 1.5%;
-                    // @include apply-at-sm-size {
                     margin-bottom: 0.5rem;
                     font-size: 12px;
-                    // }
                   }
                   .message {
-                    // @include useMulish;
-                    // @include useForum;
-                    // font-size: 15px;
-                    // @include apply-at-sm-size {
                     font-size: 14px;
                     letter-spacing: 0.005em;
-                    // }
                   }
                 }
               }
@@ -872,63 +706,42 @@
       background-repeat: no-repeat;
       background-size: cover;
       .giftWraper {
-        // width: 60%;
-        // @include apply-at-sm-md-size {
         width: 100%;
-        // }
         @include content-center;
         .tittleRibbon {
           .titleGift {
-            // width: 30%;
             @include content-center;
             text-align: center;
-            // font-size: 30px;
-            // border-bottom: 1px solid $color-gold;
-            // @include apply-at-sm-md-size {
             font-size: 16px;
             width: 100%;
             text-decoration-line: underline;
             text-underline-offset: 12px;
             border: none;
-            // }
           }
           .ribbon {
             display: flex;
             margin-top: 8%;
             margin-bottom: 8%;
             @include content-center;
-            // @include apply-at-sm-md-size {
-            // }
           }
         }
         .dropdownSection {
-          // width: 30%;
           @include content-center;
           @include directionX;
           justify-content: center;
-          // align-items: center;
           margin-bottom: 5%;
           cursor: pointer;
-          // @include apply-at-sm-md-size {
           width: 100%;
           align-items: center;
-          // }
           .title {
-            // font-size: 24px;
             margin-right: 6%;
-            // @include apply-at-sm-md-size {
             font-size: 14px;
-            // }
           }
           .icon {
-            // @include apply-at-sm-md-size {
             margin-top: -5px;
-            // }
             img {
-              // @include apply-at-sm-md-size {
               width: 10px;
               height: 6px;
-              // }
             }
           }
         }
@@ -937,32 +750,13 @@
           .imageDetail {
             @include useMerienda;
             @include directionY;
-            // .rose {
-            //   display: flex;
-            //   @include content-center;
-            //   // width: 204px;
-            //   margin-bottom: 5%;
-            //   // @include apply-at-sm-md-size {
-            //   width: 85px;
-            //   // }
-            // }
             .card {
               display: flex;
               @include content-center;
               margin-bottom: 10%;
-              // @include apply-at-sm-md-size {
               width: 270px;
-              // }
             }
             .copyWraperTop {
-              // position: relative;
-              // @include directionX;
-              // justify-content: center;
-              // align-items: center;
-              // margin-bottom: 5%;
-              // @include content-center;
-              // border: 1px solid blue;
-
               position: relative;
               @include directionX;
               @include content-center;
@@ -971,74 +765,39 @@
               margin-bottom: 5%;
               width: 90%;
               .copy {
-                // top: 10px;
                 position: absolute;
-                // width: 115px;
                 cursor: pointer;
-                // @include apply-at-sm-md-size {
                 width: 100px;
                 top: 5px;
-                // }
               }
               .notifCopyTop {
                 position: absolute;
-                // right: -110px;
                 text-align: center;
                 top: 0;
-                // @include useForum;
-                // border: 1px solid red;
-                // @include apply-at-sm-md-size {
                 font-size: 12px;
                 left: 210px;
-                // left: 10%;
-                // top: -5px;
                 right: 25px;
-
-                // position: absolute;
-                // // right: -110px;
-                // border: 1px solid yellow;
-                // top: 0;
-                // // @include useForum;
-                // // border: 1px solid red;
-                // // @include apply-at-sm-md-size {
-                // font-size: 12px;
-                // left: 310px;
-                // // left: 10%;
-                // // top: -5px;
-                // right: 25px;
-                // // z-index: 3;
-                // // }
               }
             }
           }
           .infoWrapper {
             margin: 20px 0;
-            // padding-bottom: 40px;
             @include useMerienda;
             text-align: center;
-            // @include apply-at-sm-md-size {
             @include content-center;
             padding-bottom: 35px;
             width: 90%;
-            // }
             .infoTitle {
-              // font-size: 30px;
               display: flex;
               @include content-center;
               justify-content: center;
-
-              // @include apply-at-sm-md-size {
               font-size: 16px;
               text-align: center;
-              // }
             }
             .infoDetail {
-              // font-size: 18px;
               @include content-center;
               text-align: center;
-              // @include apply-at-sm-md-size {
               font-size: 12px;
-              // }
             }
             .copyWraper {
               position: relative;
@@ -1048,68 +807,24 @@
               align-items: center;
               margin-bottom: 5%;
               .copy {
-                // top: 10px;
                 position: absolute;
-                // width: 115px;
                 cursor: pointer;
-                // @include apply-at-sm-md-size {
                 width: 100px;
                 top: 5px;
-                // }
               }
               .notifCopy {
                 position: absolute;
-                // right: -110px;
                 top: 0;
-                // @include useForum;
-                // border: 1px solid red;
-                // @include apply-at-sm-md-size {
                 font-size: 12px;
                 left: 210px;
-                // left: 10%;
-                // top: -5px;
                 right: 25px;
-
-                // }
               }
             }
           }
-          // .copyWraper {
-          //   position: relative;
-          //   @include directionX;
-          //   justify-content: center;
-          //   align-items: center;
-          //   margin-bottom: 5%;
-          //   @include content-center;
-          //   .copy {
-          //     // @include apply-at-sm-md-size {
-          //     width: 100px;
-          //     // }
-          //     position: absolute;
-          //     // width: 115px;
-          //     cursor: pointer;
-          //   }
-          //   .notifCopy {
-          //     position: absolute;
-          //     text-align: center;
-          //     // left: 75px;
-          //     // @include apply-at-sm-md-size {
-          //     font-size: 14px;
-          //     border: 1px solid red;
-
-          //     // left: 70px;
-          //     // border: 1px solid red;
-          //     // }
-          //   }
-          // }
-
           .closingStatement {
             @include useMerienda;
-            // font-size: 18px;
             @include content-center;
-            // @include apply-at-sm-md-size {
             font-size: 12px;
-            // }
           }
           .btnConfirmation {
             display: flex;
@@ -1117,16 +832,12 @@
             justify-content: center;
             align-items: center;
             padding: 0 5%;
-            // min-height: 37px;
             border-radius: 10px;
             border: 1px solid $color-gold;
-            // font-size: 18px;
             margin-bottom: 1%;
             cursor: pointer;
-            // @include apply-at-sm-md-size {
             font-size: 12px;
             min-height: 25px;
-            // }
           }
         }
         .hideGift {
@@ -1144,64 +855,29 @@
     .closingSectionContainer {
       @include directionY;
       @include useForum;
-      // padding-bottom: 20px;
       padding: 10% 0;
-      // margin-top: -20px;
-      // padding: 20px 0;
       justify-content: space-between;
-      // border: 1px solid red;
       align-items: center;
-      // background-image: url("../../static/images/closing-bg.png");
       background-image: url("../../static/images/message-icon-bg.png");
-
       background-repeat: no-repeat;
       background-size: cover;
       text-align: center;
-      // border-top: 1px solid $color-dark-brown;
-      // margin-top: -10px;
       .leftSection {
-        // border: 1px solid red;
         margin-bottom: 5%;
-        // @include directionY;
-        // justify-content: center;
-        // padding: 2rem 0;
-        // background-image: url("../../static/images/message-icon-bg.png");
-        // background-image: url("../../static/images/closing-bg.png");
-        // background-size: cover;
-        // background-repeat: no-repeat;
-        // object-fit: cover;
-
-        // align-items: center;
-        // width: 100%;
-        // margin-right: 3%;
-        // @include apply-at-sm-md-size {
-        // width: 100%;
-        // }
         img {
-          // @include apply-at-sm-md-size {
           width: 170px;
-          // }
         }
       }
       .closingSentenceWrapper {
         @include content-center;
-        // font-size: 30px;
-        // width: 100%;
-        // margin-bottom: -25px;
-        // @include apply-at-sm-md-size {
         font-size: 12px;
         width: 100%;
         margin-bottom: 0;
         font-weight: lighter;
-        // }
       }
     }
     .footerContainer {
       @include useForum;
-      // @include directionY;
-      // justify-content: center;
-      // justify-content: space-around;
-      // align-items: center;
       margin-bottom: 1%;
       border-top: 1px solid $color-dark-brown;
       .footerTitle {
@@ -1209,37 +885,20 @@
         padding: 5% 0 2%;
         @include directionY;
         align-items: center;
-        // border: 1px solid red;
-        // border: 1px solid red;
-        // width: 28%;
         justify-content: space-around;
         .colaboration {
-          // font-size: 38px;
           color: $color-dark-brown;
-          // @include apply-at-sm-md-size {
           font-size: 14px;
           line-height: 12px;
-          // }
         }
         .brand {
-          // margin-top: -2%;
-          // margin-left: -2%;
-          // margin-bottom: 2%;
-          // @include apply-at-sm-md-size {
-          // width: 80px;
-          // }
-          // border: 1px solid blue;
           height: 100%;
           width: 90px;
         }
         .contact {
-          // width: 30px;
-          // height: 30px;
           margin-bottom: 2%;
-          // @include apply-at-sm-md-size {
           width: 20px;
           height: 20px;
-          // }
         }
       }
     }
