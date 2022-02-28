@@ -86,14 +86,12 @@ const InvitationPage = () => {
   const copyText = () => {
     navigator.clipboard.writeText(wording)
     setNotif('Copied')
-    console.log(wording, 'copird')
     setTimeout(() => {
       setNotif('')
     }, 3000)
   }
 
   const addEvent = () => {
-    console.log('masuk')
     gapi.load('client:auth2', () => {
       gapi.client.init({
         apiKey: API_KEY,
@@ -120,10 +118,6 @@ const InvitationPage = () => {
           'recurrence': [
             'RRULE:FREQ=DAILY;COUNT=2'
           ],
-          // 'attendees': [
-          //   {'email': 'lpage@example.com'},
-          //   {'email': 'sbrin@example.com'},
-          // ],
           'reminders': {
             'useDefault': false,
             'overrides': [
@@ -139,13 +133,12 @@ const InvitationPage = () => {
         })
         request.execute(response => {
           alert(JSON.stringify(response))
-          console.log(response, '<< response')
+          // console.log(response, '<< response')
           window.open(response.htmlLink)
         })
       })
     })
   };
-
 
   const copyAddress = () => {
     navigator.clipboard.writeText(giftAddress);
@@ -216,8 +209,7 @@ const InvitationPage = () => {
         dispatch(resetConfirmationSuccess())
       }, 2000);
       setOpenConfirmation(!openConfirmation);
-    }
-
+    };
   }, [confirmationSuccess])
 
   const calculateTimeLeft = () => {
@@ -363,7 +355,6 @@ const InvitationPage = () => {
       </div>
     );
   };
-
 
   const generateBiography = () => {
     return (
