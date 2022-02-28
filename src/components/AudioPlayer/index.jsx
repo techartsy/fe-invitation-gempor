@@ -1,30 +1,19 @@
 import React, { useEffect, useState} from 'react';
-import Song from '../../static/music/apocalypse.mp3';
-import Vn from '../../static/music/vn.m4a';
+import Song from '../../static/music/audio.mpeg';
 import Play from '../../static/icons/play.png';
 import Pause from '../../static/icons/pause.png';
 import classes from './style.module.scss';
 
 const AudioPlayer = ({ isPlaying, setIsPlaying}) => {
-  const [checked, setChecked] = useState(false);
   const [audio] = useState(new Audio(Song));
-  const [voice] = useState(new Audio(Vn));
 
-  const changeBackground = () => {
-    if (window.scrollY >= 1951 && window.scrollY <= 4389) {
-      audio.pause();
-      voice.play();
-      setChecked(true);
-    } else {
-      voice.pause();
-      if (checked) {
-        audio.play();
-      }
-    }
+  const play = () => {
+    audio.play();
+    setIsPlaying(true);
   }
 
   useEffect(() => {
-    changeBackground()
+    play()
   })
 
   useEffect(() => {
@@ -33,9 +22,6 @@ const AudioPlayer = ({ isPlaying, setIsPlaying}) => {
 
   const onClickBtn = () => {
     setIsPlaying(!isPlaying);
-    if (isPlaying) {
-      setChecked(false);
-    }
   }
 
   return (
