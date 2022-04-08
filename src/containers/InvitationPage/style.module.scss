@@ -23,13 +23,14 @@
       top: 0;
       border: none;
       object-fit: cover;
+      background-position: center top;
       background-size: 360px 240px;
       background-repeat: no-repeat;
       border-bottom: 1px solid $color-gold;
       background-image: url("../../static/images/mainimage-sm.png");
       height: 240px;
       justify-content: flex-end;
-      @include apply-at-sm-md-size {
+      @include apply-at-sm-size {
         background-size: contain;
       }
       .countdown {
